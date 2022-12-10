@@ -1,4 +1,18 @@
-<%= link_to 'Добавить сериал', new_serial_path, class: 'shine-button' %>
+    <div style="width:100%; margin:20px;">
+
+        <%=form_tag(serials_path, :method => "get") do %>
+        <table>
+        <tr>
+            <th><%= link_to 'Добавить сериал', new_serial_path, class: 'shine-button' %> </th>
+            <th><%= text_field_tag :search_name, params[:search_name], placeholder:"поиск по названию" %> </th>
+            <th><%= submit_tag "🔍 Найти     "%> </th>
+        </tr>      
+    </table>
+        <%end%>
+    </div>
+
+
+<div style="width:100%; margin:10px;">
 
 <table class="table_price">
 <caption>Сериалы</caption>
@@ -25,4 +39,4 @@
     </tr>
 <% end %>
 </table>
-
+<div>

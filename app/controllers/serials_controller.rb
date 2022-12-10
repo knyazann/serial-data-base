@@ -9,7 +9,7 @@ class SerialsController < ApplicationController
     end
 
     def search
-        @serials = Serial.search(params[:search_name])
+        @serials = Serial.where name: params[:search_name]
     end
 
     def new 

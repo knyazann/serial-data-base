@@ -9,4 +9,5 @@ class Serial
     field :producer, type: String
 
     validates :name, presence: true
+
 end
