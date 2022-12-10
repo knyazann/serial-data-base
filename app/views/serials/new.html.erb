@@ -1,0 +1,54 @@
+<div class="modal">
+    <div class="modal__container">
+      <div class="modal__featured">
+        <button type="button" class="button--transparent button--close">
+          <svg class="nc-icon glyph" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32">
+            <g><path fill="#ffffff" d="M1.293,15.293L11,5.586L12.414,7l-8,8H31v2H4.414l8,8L11,26.414l-9.707-9.707 C0.902,16.316,0.902,15.684,1.293,15.293z"></path> </g></svg>
+          <span class="visuallyhidden">Return to Product Page</span>
+        </button>
+        <div class="modal__circle"></div>
+        <img src="https://klike.net/uploads/posts/2022-09/1663851825_b-3.jpg" class="modal__product" />
+      </div>
+      <div class="modal__content">
+        <h2>Новый сериал</h2>
+
+        <%= form_with model: @serial do |f| %>
+          <ul class="form-list">
+            <li class="form-list__row">
+              <label>Название</label>
+              <%= f.text_field :name %>
+            </li>
+
+            <li class="form-list__row">
+              <label>Год</label>
+              <%= f.text_field :year %>
+            </li>
+
+            <li class="form-list__row">
+              <label>Количество серий</label>
+              <%= f.text_field :episode_num %>
+            </li>
+
+            <li class="form-list__row">
+              <label>Жанр</label>
+              <%= f.text_field :genre %>
+            </li>
+
+            <li class="form-list__row">
+              <label>Страна</label>
+              <%= f.text_field :country %>
+            </li>
+
+            <li class="form-list__row">
+              <label>Режиссёр</label>
+              <%= f.text_field :producer %>
+            </li>
+    
+            <li>
+              <button type="submit" class="button">Добавить</button>
+            </li>
+          </ul>
+        <% end %>
+      </div> <!-- END: .modal__content -->
+    </div> <!-- END: .modal__container -->
+  </div> <!-- END: .modal -->

@@ -1,0 +1,28 @@
+<%= link_to 'Добавить сериал', new_serial_path, class: 'shine-button' %>
+
+<table class="table_price">
+<caption>Сериалы</caption>
+<tr>
+  <th>название</th>
+  <th>год</th>
+  <th>серий</th>
+  <th>жанр</th>
+  <th>страна</th>
+  <th>режиссёр</th>
+  <th colspan="2"></th>
+</tr>
+<% @serials.each do |serial| %>
+    <tr>
+        <td><%= serial.name %> </td>
+        <td><%= serial.year %> </td>
+        <td><%= serial.episode_num %> </td>
+        <td><%= serial.genre %> </td>
+        <td><%= serial.country %> </td>
+        <td><%= serial.producer %> </td>
+        <td> </td>
+        <td><a>🖉</a></td>
+        <td><a>❌</a></td>
+    </tr>
+<% end %>
+</table>
+
