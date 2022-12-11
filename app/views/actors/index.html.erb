@@ -1,0 +1,23 @@
+<%= link_to 'Добавить актёра', new_serial_path, class: 'shine-button' %>
+<div style="width:100%; margin:10px;">
+
+<table class="table_price">
+<caption>Актёры</caption>
+<tr>
+  <th>имя</th>
+  <th>год рождения</th>
+  <th>страна рождения</th>
+  <th colspan="2"></th>
+</tr>
+<% @actors.each do |actor| %>
+    <tr>
+        <td><%= actor.name %> <%= actor.surname %></td>
+        <td><%= actor.year %> </td>
+        <td><%= actor.country %> </td>
+        <td> </td>
+        <td><a>🖉</a></td>
+        <td><a>❌</a></td>
+    </tr>
+<% end %>
+</table>
+<div>
